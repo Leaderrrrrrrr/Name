@@ -19,7 +19,11 @@ for file in os.scandir("./Data/"): # Folder given as an argument
 
     logging.log(0, f"Validating file %s" % file)
 
-    filename = file.split('/')[-1]   # separate between brackets
+    filename = file.path.split('/')[-1]   # separate between brackets
+
+    #exception for text file
+    if filename == "files_downloaded.txt":
+        continue
 
     # If file cannot get read, delete
     try:
@@ -53,6 +57,13 @@ for file in os.scandir("./Data/"): # Folder given as an argument
     else:
         logging.error("Incorrect number of columns!")
         continue
+
+    #check column names
+    expected_col_names = ["batch_id", "timestamp", "reading1", "reading2", "reading3", "reading4", "reading5", "reading6", "reading7", "reading8", "reading9", "reading10"]
+    for i in range(12):
+        if expected_col_names[i] != data.columns[i]:
+            logging.error("Incorrect column names!")
+            continue
 
     # Check for unique batch IDs
     ids = []
