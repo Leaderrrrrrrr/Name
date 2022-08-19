@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bae04f32-1c67-4d7d-9c27-808726b0a261" name="Default Changelist" comment="Added validation checks on id and timespamp">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="bae04f32-1c67-4d7d-9c27-808726b0a261" name="Default Changelist" comment="New and improved README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csvVerify.py" beforeDir="false" afterPath="$PROJECT_DIR$/csvVerify.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659702448244</updated>
-      <workItem from="1660835519241" duration="6573000" />
+      <workItem from="1660835519241" duration="10696000" />
     </task>
     <task id="LOCAL-00001" summary="Added validation checks on id and timespamp">
       <created>1660847421060</created>
@@ -122,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660847421060</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New and improved README.md">
+      <created>1660847841430</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660847841430</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -164,7 +172,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added validation checks on id and timespamp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation checks on id and timespamp" />
+    <MESSAGE value="New and improved README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="New and improved README.md" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ftp_download.py">
