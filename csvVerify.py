@@ -22,7 +22,7 @@ for file in os.scandir("./Data/"): # Folder given as an argument
     filename = file.path.split('/')[-1]   # separate between brackets
 
     #exception for text file
-    if filename == "files_downloaded.txt":
+    if filename[-3:] != "csv":
         continue
 
     # If file cannot get read, delete
