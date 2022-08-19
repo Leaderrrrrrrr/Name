@@ -72,6 +72,12 @@ else:
 
 print('All files downloaded')
 
+subprocess.check_call([sys.executable, "csvVerify.py"])
+
+
+
+
+
 
 
 
