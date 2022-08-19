@@ -1,11 +1,12 @@
 import ftplib
 from datetime import datetime
 import sys
+import subprocess
 
 
 #function to download file to client machine from server
 def download_file(ftp, filename, previously_downloaded):
-    path = "/home/ftpclient/Documents/FTP/" + filename
+    path = "Data/" + filename
 
     with open(previously_downloaded, "a") as downloaded:
 
@@ -53,7 +54,7 @@ print("Connected to FTP")
 
 #%% run download
 
-FILES_DOWNLOADED_LOCATION = "/home/ftpclient/Documents/FTP/files_downloaded.txt"
+FILES_DOWNLOADED_LOCATION = "Data/files_downloaded.txt"
 
 #if no args entered, download data for today
 if len(sys.argv) == 1:
