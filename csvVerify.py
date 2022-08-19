@@ -11,11 +11,11 @@ CHECKED_PATH = "./checked/"
 #     logging.log(0, "Exiting...")
 #     exit()
 
-for file in sys.argv[1:]: # For each file given as an argument
+# for file in sys.argv[1:]: # For each file given as an argument
 
-# for file in os.scandir("./Data/"): # Folder given as an argument
-#     if not file.is_file():
-#         continue
+for file in os.scandir("./Data/"): # Folder given as an argument
+    if not file.is_file():
+        continue
 
     logging.log(0, f"Validating file %s" % file)
 
