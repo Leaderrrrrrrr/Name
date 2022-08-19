@@ -54,7 +54,7 @@ print("Connected to FTP")
 
 #%% run download
 
-FILES_DOWNLOADED_LOCATION = "Data/files_downloaded.txt"
+FILES_DOWNLOADED_LOCATION = "Data/Downloaded/files_downloaded.txt"
 
 #if no args entered, download data for today
 if len(sys.argv) == 1:
