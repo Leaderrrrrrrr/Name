@@ -1,9 +1,7 @@
-# Python program to explain os.mkdir() method
-  
-# importing os module
+
 import os
 import glob
-
+import shutil
 try:  
     path = os.path.join("Archive")
     os.mkdir(path)
@@ -21,6 +19,7 @@ except:
         if os.path.isdir("Archive/"+file[14:18]+"/"+file[18:20]+"/"+file[20:22]) == False:
             path = os.path.join("Archive/"+file[14:18]+"/"+file[18:20]+"/"+file[20:22]+"/")
             os.mkdir(path)
-            
+        if os.path.isfile("Archive/"+file[14:18]+"/"+file[18:20]+"/"+file[20:22]+"/"+file[6:]) == False:
+            shutil.copyfile(file, "Archive/"+file[14:18]+"/"+file[18:20]+"/"+file[20:22]+"/"+file[6:])
             
         
