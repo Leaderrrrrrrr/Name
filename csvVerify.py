@@ -2,6 +2,7 @@ import sys
 import os
 import logging
 import pandas as pd
+import csv
 
 CHECKED_PATH = "./checked/"
 
@@ -10,11 +11,11 @@ CHECKED_PATH = "./checked/"
 #     logging.log(0, "Exiting...")
 #     exit()
 
-#for file in sys.argv[1:]: # For each file given as an argument
+for file in sys.argv[1:]: # For each file given as an argument
 
-for file in os.scandir("./Data/"): # Folder given as an argument
-    if not file.is_file():
-        continue
+# for file in os.scandir("./Data/"): # Folder given as an argument
+#     if not file.is_file():
+#         continue
 
     logging.log(0, f"Validating file %s" % file)
 
@@ -86,4 +87,4 @@ for file in os.scandir("./Data/"): # Folder given as an argument
 
     # Save file to checked folder
     logging.log(0, "File Approved: sending to checked folder")
-    data.to_csv(CHECKED_PATH + filename, float_format='%.3f')      # If the file already exists, it will be overwritten
+    data.to_csv(CHECKED_PATH + filename, index=False, float_format='%.3f', quoting=csv.QUOTE_NONNUMERIC)      # If the file already exists, it will be overwritten
