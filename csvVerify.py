@@ -5,13 +5,14 @@ import pandas as pd
 
 CHECKED_PATH = "./checked/"
 
-if len(sys.argv) < 2: # The file takes at least one file as an argument
-    logging.error(" Must have at least one argument")
-    logging.log(0, "Exiting...")
-    exit()
+# if len(sys.argv) < 2: # The file takes at least one file as an argument
+#     logging.error(" Must have at least one argument")
+#     logging.log(0, "Exiting...")
+#     exit()
 
 #for file in sys.argv[1:]: # For each file given as an argument
-for file in os.scandir(CHECKED_PATH):
+
+for file in os.scandir("./Data/"): # Folder given as an argument
     if not file.is_file():
         continue
 
