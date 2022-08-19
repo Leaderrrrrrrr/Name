@@ -11,7 +11,7 @@ canvas1.create_window(200, 140, window=entry1)
 
 def getSquareRoot ():  
     
-    subprocess.check_call([sys.executable, "ftp_download.py ", entry1.get()])
+    subprocess.check_call([sys.executable, "ftp_download.py", entry1.get()])
     #label1 = tk.Label(root, text= float(x1)**0.5)
     #canvas1.create_window(200, 230, window=label1)
 
