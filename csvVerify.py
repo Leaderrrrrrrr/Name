@@ -12,7 +12,7 @@ if len(sys.argv) < 2: # The file takes at least one file as an argument
 
 #for file in sys.argv[1:]: # For each file given as an argument
 for file in os.scandir(CHECKED_PATH):
-    if not filename.is_file():
+    if not file.is_file():
         continue
 
     logging.log(0, f"Validating file %s" % file)
@@ -81,10 +81,8 @@ for file in os.scandir(CHECKED_PATH):
                 logging.error("value out of bounds")
                 continue
 
-            # Format
-            data[cols][i] = float("{0:.3f}".format(data.loc[i].at[cols]))
 
 
     # Save file to checked folder
     logging.log(0, "File Approved: sending to checked folder")
-    data.to_csv(CHECKED_PATH + filename)      # If the file already exists, it will be overwritten
+    data.to_csv(CHECKED_PATH + filename, float_format='%.3f')      # If the file already exists, it will be overwritten
