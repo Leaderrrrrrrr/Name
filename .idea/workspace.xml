@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bae04f32-1c67-4d7d-9c27-808726b0a261" name="Default Changelist" comment="New and improved README.md">
+    <list default="true" id="bae04f32-1c67-4d7d-9c27-808726b0a261" name="Default Changelist" comment="csvVerify date check in file name and record checking and formatting implemented">
+      <change afterPath="$PROJECT_DIR$/MED_DATA_20210701TEST/MED_DATA_20210701/MED_DATA_20210701153942.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MED_DATA_20210701TEST/MED_DATA_20210701/MED_DATA_20210701153947.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MED_DATA_20210701TEST/MED_DATA_20210701/MED_DATA_20210701153948.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MED_DATA_20210701TEST/MED_DATA_20210701/MED_DATA_20210701153952.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MED_DATA_20210701TEST/MED_DATA_20210701/MED_DATA_20210701153954.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csvVerify.py" beforeDir="false" afterPath="$PROJECT_DIR$/csvVerify.py" afterDir="false" />
     </list>
@@ -66,15 +71,39 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/scott/Documents/GitHub/Name"
+    "last_opened_file_path": "C:/Users/scott/Documents/GitHub/Name/MED_DATA_20210701TEST/MED_DATA_20210701"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\scott\Documents\GitHub\Name\MED_DATA_20210701TEST\MED_DATA_20210701" />
+      <recent name="C:\Users\scott\Documents\GitHub\Name" />
       <recent name="C:\Users\Student\Documents\Name" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.csvVerify">
+    <configuration name="csvVerify" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Name" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/csvVerify.py" />
+      <option name="PARAMETERS" value="MED_DATA_20210701TEST/MED_DATA_20210701/MED_DATA_20210701153947.csv" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ftp_download" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Name" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,6 +128,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.csvVerify" />
         <item itemvalue="Python.ftp_download" />
       </list>
     </recent_temporary>
@@ -114,7 +144,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659702448244</updated>
-      <workItem from="1660835519241" duration="10696000" />
+      <workItem from="1660835519241" duration="11120000" />
+      <workItem from="1660893204453" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="Added validation checks on id and timespamp">
       <created>1660847421060</created>
@@ -130,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660847841430</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="csvVerify date check in file name and record checking and formatting implemented">
+      <created>1660892736111</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660892736111</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -173,7 +211,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added validation checks on id and timespamp" />
     <MESSAGE value="New and improved README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="New and improved README.md" />
+    <MESSAGE value="csvVerify date check in file name and record checking and formatting implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="csvVerify date check in file name and record checking and formatting implemented" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/csvVerify.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Name$ftp_download.coverage" NAME="ftp_download Coverage Results" MODIFIED="1660893568447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Name$csvVerify.coverage" NAME="csvVerify Coverage Results" MODIFIED="1660894447810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ftp_download.py">

@@ -3,7 +3,7 @@ import os
 import logging
 import pandas as pd
 
-CHECKED_PATH = "./checked"
+CHECKED_PATH = "./checked/"
 
 if len(sys.argv) < 2: # The file takes at least one file as an argument
     logging.error(" Must have at least one argument")
@@ -13,13 +13,15 @@ if len(sys.argv) < 2: # The file takes at least one file as an argument
 for file in sys.argv[1:]: # For each file given as an argument
     logging.log(0, f"Validating file %s" % file)
 
-    filename = file.split("/")[-1]
+    filename = file.split('/')[-1]   # separate between brackets
 
     # If file cannot get read, delete
     try:
+        print(file)
         data = pd.read_csv(file)
         logging.log(0, "file read")
         logging.log(0, "removing temp file")   # !WITH THE TEMP FILE REMOVED, CONTINUE WILL DELETE THE FILE
+
         os.remove(file)
     except:
         logging.error("File not readable")
@@ -70,7 +72,7 @@ for file in sys.argv[1:]: # For each file given as an argument
 
     # Reading checking
     for cols in data.columns[2:]:
-        for i in range(data[cols]):
+        for i in range(len(data[cols])):
             if data[cols][i] < 0 or data[cols][i] > 9.9:
                 logging.error("value out of bounds")
                 continue
@@ -79,4 +81,4 @@ for file in sys.argv[1:]: # For each file given as an argument
 
     # Save file to checked folder
     logging.log(0, "File Approved: sending to checked folder")
-    pd.to_csv(CHECKED_PATH + filename)      # If the file already exists, it will be overwritten
+    data.to_csv(CHECKED_PATH + filename)      # If the file already exists, it will be overwritten
