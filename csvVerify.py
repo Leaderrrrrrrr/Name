@@ -10,7 +10,11 @@ if len(sys.argv) < 2: # The file takes at least one file as an argument
     logging.log(0, "Exiting...")
     exit()
 
-for file in sys.argv[1:]: # For each file given as an argument
+#for file in sys.argv[1:]: # For each file given as an argument
+for file in os.scandir(CHECKED_PATH):
+    if not file.is_file():
+        continue
+
     logging.log(0, f"Validating file %s" % file)
 
     filename = file.split('/')[-1]   # separate between brackets
@@ -76,9 +80,9 @@ for file in sys.argv[1:]: # For each file given as an argument
             if data[cols][i] < 0 or data[cols][i] > 9.9:
                 logging.error("value out of bounds")
                 continue
-            data[cols][i] = float("{0:.3f}".format(data[cols][i]))
+
 
 
     # Save file to checked folder
     logging.log(0, "File Approved: sending to checked folder")
-    data.to_csv(CHECKED_PATH + filename)      # If the file already exists, it will be overwritten
+    data.to_csv(CHECKED_PATH + filename, float_format='%.3f')      # If the file already exists, it will be overwritten
